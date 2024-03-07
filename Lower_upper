@@ -15,3 +15,27 @@ int main() {
         printf("This is a special character.");
     return 0;
 }
+/*#include <stdio.h>
+
+int main() {
+    char a;
+    printf("Please enter a character: ");
+    scanf("%c", &a);
+
+    if ('a' <= a && a <= 'z') {
+        printf("This is a lowercase letter.\n");
+        // Convert to uppercase
+        a = a - 32;
+        printf("Value: %c\n", a);
+
+        if ('A' <= a && a <= 'Z') {
+            printf("This is an uppercase letter.\n");
+        } else {
+            printf("This is a special character.\n");
+        }
+    } else {
+        printf("This is not a lowercase letter.\n");
+    }
+
+    return 0;
+}*/

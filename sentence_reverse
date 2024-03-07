@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+void reverse(char sen[]) {
+    int length = 0;
+
+    while (sen[length] != '\0') {
+        length++;
+    }
+
+    for (int i = length - 1; i >= 0; i--) {
+        printf("%c", sen[i]);
+    }
+    //printf("\n");
+}
+
+int main() {
+    char sentence[100] = "";
+    printf("Please enter a sentence: \n");
+
+    // Use %99[^\n] to read a whole line (up to 99 characters excluding newline)
+    scanf("%99[^\n]", sentence);
+
+    printf("The line printed backward is: \n");
+    reverse(sentence);
+
+    return 0;
+}

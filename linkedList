@@ -1,0 +1,54 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct Node {
+    char data;
+    struct Node* next;
+};
+
+typedef struct Node Node;
+
+
+int isEmpty(Node* head) {
+    return (head == NULL) ? 1 : 0;
+}
+
+void printList(Node* head) {
+    Node* current = head;
+    printf("List: ");
+    while (current != NULL) {
+        printf("%c ", current->data);
+        current = current->next;
+    }
+    printf("\n");
+}
+
+
+int main() {
+    Node* head = NULL;
+    Node* second = NULL;
+    Node* third = NULL;
+
+   
+    head = (Node*)malloc(sizeof(Node));
+    second = (Node*)malloc(sizeof(Node));
+    third = (Node*)malloc(sizeof(Node));
+
+   
+    head->data = 'A';
+    head->next = second;
+    second->data = 'B';
+    second->next = third;
+    third->data = 'C';
+    third->next = NULL;
+
+   
+    printList(head);
+
+    
+    free(head);
+    free(second);
+    free(third);
+
+    return 0;
+}
